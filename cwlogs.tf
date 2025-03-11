@@ -1,5 +1,6 @@
 locals {
-  cw_log_group_name = var.cw_log_group_name != "" ? var.cw_log_group_name : "/aws/lambda/${local.resource_name_prefix}"
+  cw_log_group_name        = var.cw_log_group_name != "" ? var.cw_log_group_name : "/aws/lambda/${local.resource_name_prefix}"
+  cw_log_group_policy_name = var.cw_log_group_policy_name != "" ? var.cw_log_group_policy_name : "${local.resource_name_prefix}-cwlogs-policy"
 }
 
 resource "aws_cloudwatch_log_group" "this" {
@@ -8,7 +9,7 @@ resource "aws_cloudwatch_log_group" "this" {
 }
 
 resource "aws_iam_policy" "cwlogs_policy" {
-  name        = "${local.cw_log_group_name}-policy"
+  name        = local.cw_log_group_policy_name
   path        = "/"
   description = "Policy that allows put data for CloudWatch Logs"
 

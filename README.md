@@ -97,6 +97,7 @@ make test
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cw_log_group_name"></a> [cw\_log\_group\_name](#input\_cw\_log\_group\_name) | n/a | `string` | `""` | no |
+| <a name="input_cw_log_group_policy_name"></a> [cw\_log\_group\_policy\_name](#input\_cw\_log\_group\_policy\_name) | n/a | `string` | `""` | no |
 | <a name="input_cw_logs_retention_in_days"></a> [cw\_logs\_retention\_in\_days](#input\_cw\_logs\_retention\_in\_days) | n/a | `number` | `7` | no |
 | <a name="input_dlq_enabled"></a> [dlq\_enabled](#input\_dlq\_enabled) | n/a | `bool` | `true` | no |
 | <a name="input_dlq_kms_data_key_reuse_period"></a> [dlq\_kms\_data\_key\_reuse\_period](#input\_dlq\_kms\_data\_key\_reuse\_period) | Number of seconds to reuse KMS data key | `number` | `300` | no |

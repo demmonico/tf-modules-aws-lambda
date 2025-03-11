@@ -65,6 +65,11 @@ variable "cw_log_group_name" {
   default = ""
 }
 
+variable "cw_log_group_policy_name" {
+  type    = string
+  default = ""
+}
+
 variable "cw_logs_retention_in_days" {
   type    = number
   default = 7
