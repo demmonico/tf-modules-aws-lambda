@@ -90,7 +90,6 @@ resource "aws_iam_role_policy_attachment" "invoke_on_failure_attachment" {
 }
 
 # Policies allowing work from the VPC
-
 resource "aws_iam_role_policy_attachment" "vpc_attachment" {
   count = var.vpc_config != null ? 1 : 0
 
