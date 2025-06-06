@@ -4,13 +4,13 @@
 
 # Terraform Modules Template
 
-Bootstraps a new Terraform module repo.
+Bootstraps an AWS Lambda with related resources creation.
 
 ## Usage
 
 ```terraform
 module "lambda" {
-  source = "git::https://github.com/demmonico/tf-modules-aws-lambda.git?ref=1.0.0"
+  source = "..."
 
   lambda_name               = local.lambda_name
   cw_logs_retention_in_days = var.lambdas_cw_logs_retention_in_days
