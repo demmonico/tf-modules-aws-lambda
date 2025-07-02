@@ -60,6 +60,13 @@ variable "lambda_on_failure_destination" {
 
 #---------------------------#
 
+variable "role_additional_policy_arns" {
+  type    = map(string)
+  default = null
+}
+
+#---------------------------#
+
 variable "cw_log_group_name" {
   type    = string
   default = ""

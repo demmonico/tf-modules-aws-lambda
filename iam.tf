@@ -96,3 +96,12 @@ resource "aws_iam_role_policy_attachment" "vpc_attachment" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
   role       = aws_iam_role.this.name
 }
+
+# Additional policy ARNs to be attached
+
+resource "aws_iam_role_policy_attachment" "additional_policies" {
+  for_each = var.role_additional_policy_arns == null ? {} : var.role_additional_policy_arns
+
+  policy_arn = each.value
+  role       = aws_iam_role.this.name
+}
